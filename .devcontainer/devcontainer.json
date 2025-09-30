@@ -1,0 +1,18 @@
+{
+  "name": "Flask Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.10",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "pip3 install --user -r requirements.txt",
+  "remoteUser": "vscode",
+  "onCreateCommand": "export FLASK_APP=app.py && export FLASK_ENV=development"
+}
